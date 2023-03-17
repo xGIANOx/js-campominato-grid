@@ -1,0 +1,15 @@
+a{
+    text-decoration: none;
+    color: black;
+    font-size: 15px;
+}
+
+button{
+    background-color: rgb(232, 222, 222);
+    border: 1px solid gray;
+}
+
+img{
+    max-width: 100%;
+    width: 100px;
+}
