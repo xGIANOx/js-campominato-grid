@@ -4,9 +4,14 @@ a{
     font-size: 15px;
 }
 
-button{
+button,
+select{
     background-color: rgb(232, 222, 222);
     border: 1px solid gray;
+}
+
+select{
+    height: 26px;
 }
 
 img{
@@ -25,6 +30,28 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cell_diff_2{
+    
+    border: 1px solid black;
+    width: calc(100% / 9);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.cell_diff_3{
+    
+    border: 1px solid black;
+    width: calc(100% / 7);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .bg_blue{

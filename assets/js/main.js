@@ -1,36 +1,93 @@
-//Ogni volta che clicco su un quadrato si colora di verde */
+// Creo una variabile dove salvo il container delle celle 
+const playButton = document.querySelector(".rounded-3.p-0.px-2");
 
-// Creo una variabile dove salvo il container delle 64 celle (container-grid)
+playButton.addEventListener("click", function() {
+  const container = document.querySelector(".container");
 
-const container = document.querySelector(".container");
+  let cell_number = 100;
 
-// creo un max numero di celle
+  for (let i = 1; i <= cell_number; i++) {
+    const cell = `<div class="cell">${i}</div>`;
+    container.innerHTML += cell;
+  }
 
-let cell_number = 100;
+  const cellEl = document.querySelectorAll(".cell");
 
-// creo un ciclo n volte per le celle (dove n in questo caso sta per 64)
-
-for (let i = 1; i <= cell_number; i++) {
-  const cell = `<div class="cell">${i}</div>`;
-  container.innerHTML += cell;
-}
-
-// seleziono una cella che ha classe cell e active
-
-const cellEl = document.querySelectorAll(".cell");
-
-// aggiungo eventlisner per la classe active ciclando per la lunghezza dell'array cellEl
-
-
-for (let i = 0; i < cellEl.length; i++) {
+  for (let i = 0; i < cellEl.length; i++) {
     const thisCell = cellEl[i];
     console.log(thisCell);
     thisCell.addEventListener("click", function() {
         thisCell.classList.toggle("bg_blue");
-        console.log(i + 1);
-        
+        console.log(i + 1);    
     })
+  }
+});
 
+// difficulty 
 
+const testSelect = document.getElementById('difficulty');
+testSelect.addEventListener('change', function(){
+	
+	if (this.value == 'diff_1') {
+        const container = document.querySelector(".container");
+
+        let cell_number = 100;
+
+        for (let i = 1; i <= cell_number; i++) {
+            const cell = `<div class="cell">${i}</div>`;
+            container.innerHTML += cell;
+        }
+
+        const cellEl = document.querySelectorAll(".cell");
+
+        for (let i = 0; i < cellEl.length; i++) {
+            const thisCell = cellEl[i];
+            console.log(thisCell);
+            thisCell.addEventListener("click", function() {
+            thisCell.classList.toggle("bg_blue");
+            console.log(i + 1);    
+        })
+        }
+    } else if (this.value == 'diff_2'){
+        const container = document.querySelector(".container");
+
+        let cell_number = 81;
+
+        for (let i = 1; i <= cell_number; i++) {
+            let cell = `<div class="cell_diff_2">${i}</div>`;
+            container.innerHTML += cell;
+        }
+
+        const cellEl = document.querySelectorAll(".cell_diff_2");
+
+        for (let i = 0; i < cellEl.length; i++) {
+            const thisCell = cellEl[i];
+            console.log(thisCell);
+            thisCell.addEventListener("click", function() {
+            thisCell.classList.toggle("bg_blue");
+            console.log(i + 1);    
+        })
+        }
+    } else {
+        const container = document.querySelector(".container");
+
+        let cell_number = 49;
+
+        for (let i = 1; i <= cell_number; i++) {
+            let cell = `<div class="cell_diff_3">${i}</div>`;
+            container.innerHTML += cell;
+        }
+
+        const cellEl = document.querySelectorAll(".cell_diff_3");
+
+        for (let i = 0; i < cellEl.length; i++) {
+            const thisCell = cellEl[i];
+            console.log(thisCell);
+            thisCell.addEventListener("click", function() {
+            thisCell.classList.toggle("bg_blue");
+            console.log(i + 1);    
+        })
+        }
+    }
     
-}
+})
