@@ -13,3 +13,20 @@ img{
     max-width: 100%;
     width: 100px;
 }
+
+main{
+    background-color: #7fffd4;
+}
+
+.cell{
+    border: 1px solid black;
+    width: calc(100% / 10);
+    aspect-ratio: 1 / 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg_blue{
+    background-color: aqua;
+}
